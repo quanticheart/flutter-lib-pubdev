@@ -1,7 +1,6 @@
 name: qh_lib_test
 version: 1.0.0+1
 description: A Flutter package for both android and iOS which provides extensions and widgets
-authors:  [John Alves <dev.quanticheart@gmail.com>]
 homepage: https://github.com/quanticheart/flutter-lib-pubdev
 
 environment:

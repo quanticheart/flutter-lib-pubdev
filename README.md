@@ -1,44 +1,3 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
-
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
-
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
-```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
--->
-
 # Create Pub Dev Lib
 
 A new Flutter project.
@@ -78,7 +37,6 @@ it will contain all the structure of a common pubspec, but it will have some key
 name: qh_lib_test
 version: 1.0.0
 description: A Flutter package for both android and iOS which provides extensions and widgets
-authors:  [John Alves <dev.quanticheart@gmail.com>]
 homepage: https://github.com/quanticheart/flutter-lib-pubdev
 ```
 - [README.md](README.md)
@@ -129,7 +87,7 @@ dependências:
 Pub.dev generates a documentation page for every published package. You can find a link to it on the right panel of the package’s pub.dev page:
 
 Example:
-![Captura de Tela 2023-01-05 às 13.16.20.png](images%2FCaptura%20de%20Tela%202023-01-05%20%C3%A0s%2013.16.20.png)
+![img1.png](images%2Fimg1.png)
 
 To enhance this document with your own words, you have to place special comments above your public classes, functions, properties and typedefs in your code. Why special? Because they use three slashes (///) instead of two.
 
@@ -148,6 +106,19 @@ Blocks of comments. It's not convention to use block comments in Dart.
 ```
 
 read more in [dart.dev](https://dart.dev/guides/language/effective-dart/documentation)
+
+### [.pubignore](.pubignore) file
+
+read more in [what-files-are-published](https://dart.dev/tools/pub/publishing#what-files-are-published)
+
+### Publishing pre releases
+
+As described in semantic versioning, to make a prerelease of a version you append a suffix to the version. For example, 
+to make a prerelease of version **2.0.0** you might use the version **2.0.0-dev.1**. Later, when you release version **2.0.0**, 
+it will take precedence over all **2.0.0-XXX** pre releases.
+
+Because pub prefers stable releases when available, users of a prerelease package might need to change their dependency 
+constraints. For example, if a user wants to test pre releases of version **2.1**, then instead of **^2.0.0** or **^2.1.0** they might specify **^2.1.0-dev.1**.
 
 ### Publish Your Package
 
