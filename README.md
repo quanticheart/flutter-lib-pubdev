@@ -45,6 +45,8 @@ A new Flutter project.
 
 ## Getting Started
 
+[Official Doc](https://dart.dev/tools/pub/publishing)
+
 ### Type Of Packages
 - Dart packages
 
@@ -66,7 +68,7 @@ when creating a project with the ***package template***, the flutter project wil
 
 ### Files
 
-- pubspec.yaml
+- [pubspec.yaml](pubspec.yaml)
 
 it will contain all the structure of a common pubspec, but it will have some keys that you can edit, to describe your lib and leave the contact data
 
@@ -77,21 +79,92 @@ description: A Flutter package for both android and iOS which provides extension
 authors:  [John Alves <dev.quanticheart@gmail.com>]
 homepage: https://github.com/quanticheart/flutter-lib-pubdev
 ```
-- README.md
+- [README.md](README.md)
 
 Add the description of your package, how to use it, screenshots or animated gif, an example in the file
 
 A self-explanatory example is already added to the template package
 
-- CHANGELOG.md
+- [CHANGELOG.md](CHANGELOG.md)
 
 A (mostly) empty markdown file for tracking version changes to the package.
 
-- LICENSE file
+- [LICENSE](LICENSE) file
 
 Add the LICENSE in the repository. You can add the license by following these [steps on github](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository).
 
+it is also possible to select a ready-made license in [choosealicense](https://choosealicense.com/)
 
-- folder test/
+- folder [test](test)
 
 The unit tests for the package.
+
+### lib/lib_name.dart
+
+this file is the main one of the project, it is the gateway to the public files, whenever you want to expose a new file, you can use the code:
+
+```
+export 'extentions/msg_ext.dart';
+```
+
+look at the input file of this project, to get an idea => [qh_pubdev_test.dart](lib%2Fqh_pubdev_test.dart)
+
+### [Example](example) Folder
+
+this folder contains a README.md which can describe all the usage of your lib
+
+it can also have a flutter project, but to use the lib, you must have a configuration in the example project's pubspec.yaml:
+```
+dependências: 
+  flutter: 
+    sdk:  flutter 
+  your_lib_name: 
+    path:  ../ 
+  logger:  ^0.9.4
+```
+### Documenting
+
+Pub.dev generates a documentation page for every published package. You can find a link to it on the right panel of the package’s pub.dev page:
+
+Example:
+![Captura de Tela 2023-01-05 às 13.16.20.png](images%2FCaptura%20de%20Tela%202023-01-05%20%C3%A0s%2013.16.20.png)
+
+To enhance this document with your own words, you have to place special comments above your public classes, functions, properties and typedefs in your code. Why special? Because they use three slashes (///) instead of two.
+
+Example:
+
+```
+// Inline comments
+
+/*
+Blocks of comments. It's not convention to use block comments in Dart.
+*/
+
+/// Documentation
+///
+/// This is what you should use to document your classes.
+```
+
+read more in [dart.dev](https://dart.dev/guides/language/effective-dart/documentation)
+
+### Publish Your Package
+
+First, sign in to [pub.dev](https://pub.dev/) with your Google Account and configure something if you need it, 
+it is possible to link your web domain with your pub dev account in [create-publisher](https://pub.dev/create-publisher)
+
+
+Next, run the publish command in dry-run mode to see if everything passes analysis:
+
+```
+flutter pub publish --dry-run
+```
+
+If there is any error solve it else we can publish it to pub.dev. But be sure that you are ready because publishing is forever. we can’t remove the package from there. So if you are ready, run following command
+
+```
+flutter pub publish
+```
+
+For authentication, a link will be provided, just open in browser and select your Google account.
+
+You can look for your package on [pub.dev](https://pub.dev/) after some time. It will take a few minutes.
