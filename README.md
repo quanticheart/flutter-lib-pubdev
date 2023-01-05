@@ -47,6 +47,8 @@ A new Flutter project.
 
 [Official Doc](https://dart.dev/tools/pub/publishing)
 
+[kodeco](https://www.kodeco.com/19421827-creating-and-publishing-a-flutter-package)
+
 ### Type Of Packages
 - Dart packages
 
