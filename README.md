@@ -141,3 +141,18 @@ flutter pub publish
 For authentication, a link will be provided, just open in browser and select your Google account.
 
 You can look for your package on [pub.dev](https://pub.dev/) after some time. It will take a few minutes.
+
+### Revoke access to pub dev
+
+- Add the new uploader with ``flutter pub uploader add new_email@email.com``
+- Remove the previous uploader with ``flutter pub uploader remove previous_email@email.com``
+- Remove saved credentials using ``flutter pub logout`` or ``rm ~/Library/Application Support/dart/pub-credentials.json.``
+- Finally, type ``flutter pub publish`` and allow access from your navigator.
+
+### GitHub Actions
+
+[dart-and-flutter-package-publisher](https://github.com/marketplace/actions/dart-and-flutter-package-publisher)
+
+[creating-a-complete-github-workflow-for-flutter](https://betterprogramming.pub/creating-a-complete-github-workflow-for-flutter-529f6bd7bb10)
+
+[publishing-dart-packages-with-github-actions](https://medium.com/evenbit/publishing-dart-packages-with-github-actions-5240068a2f7d)
